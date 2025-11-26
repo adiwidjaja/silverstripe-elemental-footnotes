@@ -11,7 +11,7 @@ tinymce.PluginManager.add('footnotelink', function (editor, url) {
                 type: 'panel',
                 items: [
                             {type: 'input', name: 'ID', label: 'ID of footnote'},
-                            {type: 'input', name: 'LinkText', label: 'Link title'},
+                            // {type: 'input', name: 'LinkText', label: 'Link title'},
                 ]
               },
               buttons: [
@@ -24,10 +24,10 @@ tinymce.PluginManager.add('footnotelink', function (editor, url) {
                   text: 'Save',
                   primary: true
                 }
-              ],                
+              ],
         onSubmit: function (api) {
             var data = api.getData();
-            editor.insertContent('<a class="footnote-link" href="#footnote-item-' + data.ID + '">'+ data.LinkText+'</a>');
+            editor.insertContent('[footnote,id=' + data.ID + ']');
             api.close();
         }
             });

@@ -5,13 +5,14 @@ namespace DNADesign\Elemental\Extensions;
 use DNADesign\Elemental\Models\BaseElement;
 use DNADesign\Elemental\Models\ElementalArea;
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Core\Extension;
 use SilverStripe\ORM\DataExtension;
 
 /**
  * @method ElementalArea ElementalArea()
  * @property int ElementalAreaID
  */
-class ElementalFootnotesExtension extends DataExtension //ElementalAreasExtension
+class ElementalFootnotesExtension extends Extension
 {
     /**
      * @see SiteTree::getAnchorsOnPage()

@@ -5,7 +5,7 @@
     <% if $Notes %>
     <div class="footnotes-container">
         <% loop $Notes %>
-        <div class="footnote-item">
+        <div class="footnote-item" id="footnote-item-$ID">
             <% if $Top.Enumerate %>
             <span class="footnotes-index">$Pos</span>
             <% end_if %>
